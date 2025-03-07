@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:podkes/explore.dart';
 import 'package:podkes/ui_helper.dart';
 
 class GettingStarted extends StatelessWidget {
@@ -51,7 +52,12 @@ class GettingStarted extends StatelessWidget {
              SizedBox(height: 50.h),
 
             ElevatedButton(
-              onPressed: () {},
+                onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Explore()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
