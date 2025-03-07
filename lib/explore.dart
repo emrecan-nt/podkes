@@ -129,29 +129,19 @@ class Explore extends StatelessWidget {
                   Container(
                     width: 160.w,
                     height: 160.h,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFFB548C6),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                    ),
+                    decoration:  UiHelper.getPreviewContainerDecoration(Color(0xFFB548C6)),
                     padding: EdgeInsets.only(top: 39),
                     child: Image.asset(
                       "assets/images/preview1.png",
                       fit: BoxFit.cover,
                     ),
                   ),
-        
+         
                   SizedBox(width: 12.w),
                   Container(
                     width: 160.w,
                     height: 160.h,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFF32A7E2),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                    ),
+                    decoration: UiHelper.getPreviewContainerDecoration(Color(0xFF32A7E2)),
                     child: Stack(
                       children: [
                         Positioned.fill(
@@ -180,14 +170,7 @@ class Explore extends StatelessWidget {
                     height: 34.h,
                     child: Text(
                       'The missing 96 percent of the universe',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13.h,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w700,
-                        height: 1.23.h,
-                        letterSpacing: 0.30,
-                      ),
+                      style: UiHelper.getPreviewTitleTextStyle(),
                     ),
                   ),
                 ),
@@ -199,14 +182,7 @@ class Explore extends StatelessWidget {
                     height: 34.h,
                     child: Text(
                       'How Dolly Parton led me to an epiphany',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13.h,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w700,
-                        height: 1.23.h,
-                        letterSpacing: 0.30,
-                      ),
+                     style: UiHelper.getPreviewTitleTextStyle(),
                     ),
                   ),
                 ),
@@ -223,14 +199,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Claire Malone',
-                        style: TextStyle(
-                          color: Color(0xFFCCCCCC),
-                          fontSize: 10,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          height: 1.60,
-                          letterSpacing: 0.30,
-                        ),
+                        style: UiHelper.getPreviewAuthorTextStyle(),
                       ),
                     ),
                   ),
@@ -241,14 +210,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Abumenyang',
-                        style: TextStyle(
-                          color: Color(0xFFCCCCCC),
-                          fontSize: 10,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          height: 1.60,
-                          letterSpacing: 0.30,
-                        ),
+                        style: UiHelper.getPreviewAuthorTextStyle(), 
                       ),
                     ),
                   ),
@@ -260,14 +222,10 @@ class Explore extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
+                    
                     width: 160.w,
                     height: 160.h,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFFEC663B),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                    ),
+                    decoration:UiHelper.getPreviewContainerDecoration(Color(0xFFEC663B)),
                     padding: EdgeInsets.only(top: 39),
                     child: Image.asset(
                       "assets/images/preview3.png",
@@ -276,14 +234,10 @@ class Explore extends StatelessWidget {
                   ),
                   SizedBox(width: 12.w),
                   Container(
+                    
                     width: 160.w,
                     height: 160.h,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFFFFBF47),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                    ),
+                     decoration:UiHelper.getPreviewContainerDecoration(Color(0xFFFFBF47),),
                     padding: EdgeInsets.only(top: 39),
                     child: Image.asset(
                       "assets/images/preview4.png",
@@ -302,14 +256,7 @@ class Explore extends StatelessWidget {
                     height: 34.h,
                     child: Text(
                       'The missing 96 percent of the universe',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13.h,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w700,
-                        height: 1.23.h,
-                        letterSpacing: 0.30,
-                      ),
+                      style: UiHelper.getPreviewTitleTextStyle(),
                     ),
                   ),
                 ),
@@ -321,14 +268,7 @@ class Explore extends StatelessWidget {
                     height: 34.h,
                     child: Text(
                       'Ngobam with Denny Caknan',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13.h,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w700,
-                        height: 1.23.h,
-                        letterSpacing: 0.30,
-                      ),
+                      style:  UiHelper.getPreviewTitleTextStyle(),
                     ),
                   ),
                 ),
@@ -345,14 +285,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Tir McDohl',
-                        style: TextStyle(
-                          color: Color(0xFFCCCCCC),
-                          fontSize: 10,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          height: 1.60,
-                          letterSpacing: 0.30,
-                        ),
+                        style: UiHelper.getPreviewAuthorTextStyle(), 
                       ),
                     ),
                   ),
@@ -363,14 +296,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Denny Kulon',
-                        style: TextStyle(
-                          color: Color(0xFFCCCCCC),
-                          fontSize: 10,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          height: 1.60,
-                          letterSpacing: 0.30,
-                        ),
+                        style: UiHelper.getPreviewAuthorTextStyle(), 
                       ),
                     ),
                   ),

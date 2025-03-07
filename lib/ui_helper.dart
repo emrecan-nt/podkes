@@ -54,4 +54,43 @@ class UiHelper {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(36)),
     );
   }
+
+  static ShapeDecoration getPreviewContainerDecoration(Color color) {
+    return ShapeDecoration(
+      color: color,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+    );
+  }
+
+  static TextStyle getTrendingTextStyle() {
+    return TextStyle(
+      color: Color(0xFFF4F7FC),
+      fontSize: 24.h,
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.w700,
+      height: 1.17.h,
+    );
+  }
+
+  static TextStyle getPreviewTitleTextStyle() {
+    return TextStyle(
+      color: Colors.white,
+      fontSize: 13.h,
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.w700,
+      height: 1.23.h,
+      letterSpacing: 0.30,
+    );
+  }
+
+  static TextStyle getPreviewAuthorTextStyle() {
+    return TextStyle(
+      color: Color(0xFFCCCCCC),
+      fontSize: 10,
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.w500,
+      height: 1.60,
+      letterSpacing: 0.30,
+    );
+  }
 }
