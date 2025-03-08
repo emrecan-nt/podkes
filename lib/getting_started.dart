@@ -23,14 +23,14 @@ class GettingStarted extends StatelessWidget {
               
                 child: Image.asset(
                   'assets/images/good-faces.png',
-                  width: UiHelper.getImageSize(context).width,
-                  height: UiHelper.getImageSize(context).height,
+                  width: UiHelper.getImageSize(context, portraitWidth: 240, landscapeWidth: 130, portraitHeight: 317, landscapeHeight: 300, ).width,
+                  height: UiHelper.getImageSize(context, portraitWidth: 240, landscapeWidth: 130, portraitHeight: 317, landscapeHeight: 300, ).height,
                   fit: BoxFit.fill,
                 ),
               ),
             
             SizedBox(height: 40.h),
-            Text("Podkes", style: UiHelper.getPodkesTextStyle()),
+            Text("Podkes", style: UiHelper.getPodkesTextStyle(context)),
 
              SizedBox(height: 12.h),
              Text(

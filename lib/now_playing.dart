@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:podkes/ui_helper.dart';
 
-
 class NowPlaying extends StatelessWidget {
   const NowPlaying({super.key});
 
@@ -18,8 +17,8 @@ class NowPlaying extends StatelessWidget {
           'Now Playing',
           style: GoogleFonts.inter(
             color: Colors.white,
-            fontSize: 16.h,
-            
+            fontSize: 16.sp,
+
             fontWeight: FontWeight.w500,
             height: 1,
             letterSpacing: 0.30,
@@ -31,7 +30,7 @@ class NowPlaying extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        toolbarHeight: (kToolbarHeight + 16.0).h,
+        toolbarHeight: kToolbarHeight + 16.0.h,
         titleSpacing: 8.0,
       ),
       body: SingleChildScrollView(
@@ -40,7 +39,7 @@ class NowPlaying extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(39.h, 64.h, 0, 0),
+              padding: EdgeInsets.fromLTRB(39.w, 64.h, 0, 0),
               child: Container(
                 width: 297.w,
                 height: 280.h,
@@ -53,12 +52,28 @@ class NowPlaying extends StatelessWidget {
                 padding: EdgeInsets.only(top: 68.h),
                 child: Image.asset(
                   "assets/images/preview1.png",
+                  width:
+                      UiHelper.getImageSize(
+                        context,
+                        portraitWidth: 297,
+                        portraitHeight: 212,
+                        landscapeWidth: 200,
+                        landscapeHeight: 120,
+                      ).width,
+                  height:
+                      UiHelper.getImageSize(
+                        context,
+                        portraitWidth: 297,
+                        portraitHeight: 212,
+                        landscapeWidth: 200,
+                        landscapeHeight: 120,
+                      ).height,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(41.h, 24.h, 0, 0),
+              padding: EdgeInsets.fromLTRB(41.w, 24.h, 0, 0),
               child: SizedBox(
                 width: 295.w,
                 height: 45.h,
@@ -66,23 +81,34 @@ class NowPlaying extends StatelessWidget {
                   'The missing 96 percent of the universe',
                   style: GoogleFonts.inter(
                     color: Colors.white,
-                    fontSize: 20.h,
-                    
+                    fontSize:
+                        MediaQuery.of(context).orientation ==
+                                Orientation.landscape
+                            ? 10.sp
+                            : 20.sp,
                     fontWeight: FontWeight.w700,
-                    height: 1.20.h,
-                    letterSpacing: 0.30.h,
+                    height:
+                        MediaQuery.of(context).orientation ==
+                                Orientation.landscape
+                            ? 0.60.h
+                            : 1.20.h,
+                    letterSpacing:
+                        MediaQuery.of(context).orientation ==
+                                Orientation.landscape
+                            ? 0.15.h
+                            : 0.30.h,
                   ),
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(41.h, 20.h, 0, 20.h),
+              padding: EdgeInsets.fromLTRB(41.w, 20.h, 0, 20.h),
               child: Text(
                 'Claire Malone',
                 style: GoogleFonts.inter(
                   color: Color(0xFFCCCCCC),
-                  fontSize: 14.h,
-                 
+                  fontSize: 14.sp,
+
                   fontWeight: FontWeight.w500,
                   height: 1.14,
                   letterSpacing: 0.30,
@@ -90,33 +116,31 @@ class NowPlaying extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 42),
+              padding: EdgeInsets.only(left: 42.w),
               child: SizedBox(
                 width: 290.w,
                 child: Image.asset("assets/images/fooo.png"),
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 39.h,
-              ), 
+              padding: EdgeInsets.symmetric(horizontal: 39.w),
               child: Column(
                 children: [
-                  SizedBox(height: 25.h), 
+                  SizedBox(height: 25.h),
                   Row(
                     children: [
                       Expanded(
                         child: Text(
                           '24:32',
                           textAlign: TextAlign.left,
-                          style: UiHelper.getTimeStyle(),
+                          style: UiHelper.getTimeStyle(context),
                         ),
                       ),
                       Expanded(
                         child: Text(
                           '34:00',
                           textAlign: TextAlign.right,
-                          style: UiHelper.getTimeStyle(),
+                          style: UiHelper.getTimeStyle(context),
                         ),
                       ),
                     ],
@@ -126,7 +150,7 @@ class NowPlaying extends StatelessWidget {
             ),
             SizedBox(height: 40.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center, 
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   width: 14.w,
@@ -138,7 +162,7 @@ class NowPlaying extends StatelessWidget {
                   ),
                   child: Image.asset("assets/images/back.png"),
                 ),
-                SizedBox(width: 28.w), 
+                SizedBox(width: 28.w),
                 Container(
                   width: 56.w,
                   height: 56.h,

@@ -63,7 +63,7 @@ class Explore extends StatelessWidget {
                       child: Text(
                         'All',
                         textAlign: TextAlign.center,
-                        style: UiHelper.getSliderTextStyle(),
+                        style: UiHelper.getSliderTextStyle(context),
                       ),
                     ),
                     SizedBox(width: 12.w),
@@ -74,7 +74,7 @@ class Explore extends StatelessWidget {
                       child: Text(
                         'Life',
                         textAlign: TextAlign.center,
-                        style: UiHelper.getSliderTextStyle(),
+                        style: UiHelper.getSliderTextStyle(context),
                       ),
                     ),
                     SizedBox(width: 12.w),
@@ -85,7 +85,7 @@ class Explore extends StatelessWidget {
                       child: Text(
                         'Comedy',
                         textAlign: TextAlign.center,
-                        style: UiHelper.getSliderTextStyle(),
+                        style: UiHelper.getSliderTextStyle(context),
                       ),
                     ),
                     SizedBox(width: 12.w),
@@ -96,7 +96,7 @@ class Explore extends StatelessWidget {
                       child: Text(
                         'Tech',
                         textAlign: TextAlign.center,
-                        style: UiHelper.getSliderTextStyle(),
+                        style: UiHelper.getSliderTextStyle(context),
                       ),
                     ),
                   ],
@@ -106,7 +106,7 @@ class Explore extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(left: 20.w),
                 child: SizedBox(
                   width: 107.w,
                   height: 30.h,
@@ -116,7 +116,7 @@ class Explore extends StatelessWidget {
                     style: GoogleFonts.inter(
                       color: Color(0xFFF4F7FC),
                       fontSize: 24.h,
-                      
+
                       fontWeight: FontWeight.w700,
                       height: 1.17.h,
                     ),
@@ -141,9 +141,25 @@ class Explore extends StatelessWidget {
                       decoration: UiHelper.getPreviewContainerDecoration(
                         Color(0xFFB548C6),
                       ),
-                      padding: EdgeInsets.only(top: 39),
+                      padding: EdgeInsets.only(top: 39.h),
                       child: Image.asset(
                         "assets/images/preview1.png",
+                        width:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).width,
+                        height:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).height,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -165,6 +181,22 @@ class Explore extends StatelessWidget {
                           bottom: 0,
                           child: Image.asset(
                             "assets/images/preview2.png",
+                            width:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).width,
+                        height:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).height,
 
                             fit: BoxFit.fill,
                           ),
@@ -178,53 +210,53 @@ class Explore extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   child: SizedBox(
                     width: 158.w,
                     height: 34.h,
                     child: Text(
                       'The missing 96 percent of the universe',
-                      style: UiHelper.getPreviewTitleTextStyle(),
+                      style: UiHelper.getPreviewTitleTextStyle(context),
                     ),
                   ),
                 ),
 
                 Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: EdgeInsets.only(left: 10.w),
                   child: SizedBox(
                     width: 158.w,
                     height: 34.h,
                     child: Text(
                       'How Dolly Parton led me to an epiphany',
-                      style: UiHelper.getPreviewTitleTextStyle(),
+                      style: UiHelper.getPreviewTitleTextStyle(context),
                     ),
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(top: 5),
+              padding: EdgeInsets.only(top: 5.h),
               child: Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: SizedBox(
-                      width: 74,
-                      height: 17,
+                      width: 74.w,
+                      height: 17.h,
                       child: Text(
                         'Claire Malone',
-                        style: UiHelper.getPreviewAuthorTextStyle(),
+                        style: UiHelper.getPreviewAuthorTextStyle(context),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 100),
+                    padding: EdgeInsets.only(left: 100.w),
                     child: SizedBox(
-                      width: 74,
-                      height: 17,
+                      width: 74.w,
+                      height: 17.h,
                       child: Text(
                         'Abumenyang',
-                        style: UiHelper.getPreviewAuthorTextStyle(),
+                        style: UiHelper.getPreviewAuthorTextStyle(context),
                       ),
                     ),
                   ),
@@ -241,9 +273,25 @@ class Explore extends StatelessWidget {
                     decoration: UiHelper.getPreviewContainerDecoration(
                       Color(0xFFEC663B),
                     ),
-                    padding: EdgeInsets.only(top: 35),
+                    padding: EdgeInsets.only(top: 35.h),
                     child: Image.asset(
                       "assets/images/preview3.png",
+                      width:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).width,
+                        height:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).height,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -254,9 +302,25 @@ class Explore extends StatelessWidget {
                     decoration: UiHelper.getPreviewContainerDecoration(
                       Color(0xFFFFBF47),
                     ),
-                    padding: EdgeInsets.only(top: 30),
+                    padding: EdgeInsets.only(top: 30.h),
                     child: Image.asset(
                       "assets/images/preview4.png",
+                      width:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).width,
+                        height:
+                            UiHelper.getImageSize(
+                              context,
+                              portraitWidth: 149,
+                              portraitHeight: 121,
+                              landscapeWidth: 120,
+                              landscapeHeight: 80,
+                            ).height,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -266,53 +330,53 @@ class Explore extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   child: SizedBox(
                     width: 158.w,
                     height: 34.h,
                     child: Text(
                       'The missing 96 percent of the universe',
-                      style: UiHelper.getPreviewTitleTextStyle(),
+                      style: UiHelper.getPreviewTitleTextStyle(context),
                     ),
                   ),
                 ),
 
                 Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: EdgeInsets.only(left: 10.w),
                   child: SizedBox(
                     width: 158.w,
                     height: 34.h,
                     child: Text(
                       'Ngobam with Denny Caknan',
-                      style: UiHelper.getPreviewTitleTextStyle(),
+                      style: UiHelper.getPreviewTitleTextStyle(context),
                     ),
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(top: 5),
+              padding: EdgeInsets.only(top: 5.h),
               child: Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 20.w),
                     child: SizedBox(
-                      width: 74,
-                      height: 17,
+                      width: 74.w,
+                      height: 17.h,
                       child: Text(
                         'Tir McDohl',
-                        style: UiHelper.getPreviewAuthorTextStyle(),
+                        style: UiHelper.getPreviewAuthorTextStyle(context),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 100),
+                    padding: EdgeInsets.only(left: 100.w),
                     child: SizedBox(
-                      width: 74,
-                      height: 17,
+                      width: 74.w,
+                      height: 17.h,
                       child: Text(
                         'Denny Kulon',
-                        style: UiHelper.getPreviewAuthorTextStyle(),
+                        style: UiHelper.getPreviewAuthorTextStyle(context),
                       ),
                     ),
                   ),

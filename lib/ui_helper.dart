@@ -13,22 +13,24 @@ class UiHelper {
     }
   }
 
-  static TextStyle getPodkesTextStyle() {
-    return TextStyle(
-      color: Colors.white,
-      fontSize: 36,
-      fontWeight: FontWeight.w700,
-      height: 0.44,
-      letterSpacing: 0.30,
-    );
-  }
+ static TextStyle getPodkesTextStyle(BuildContext context) {
+  bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
+  return TextStyle(
+    color: Colors.white,
+    fontSize: isLandscape ? 18.sp : 36.sp,
+    fontWeight: FontWeight.w700,
+    height: isLandscape ? 0.22.h : 0.44.h,
+    letterSpacing: isLandscape ? 0.15 : 0.30,
+  );
+}
+
 
   static Size getImageSize(
     BuildContext context, {
-    double portraitWidth = 240,
-    double portraitHeight = 317,
-    double landscapeWidth = 130,
-    double landscapeHeight = 300,
+    required double portraitWidth,
+    required double portraitHeight,
+    required double landscapeWidth,
+    required double landscapeHeight,
   }) {
     Orientation orientation = MediaQuery.of(context).orientation;
     if (orientation == Orientation.portrait) {
@@ -38,19 +40,21 @@ class UiHelper {
     }
   }
 
-  static TextStyle getSliderTextStyle() {
+
+  static TextStyle getSliderTextStyle(BuildContext context) {
+    bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     return GoogleFonts.inter(
-      color: Color(0xFFF9F9FA),
-      fontSize: 13,
+      color: const Color(0xFFF9F9FA),
+      fontSize: isLandscape ? 6.5.sp : 13.sp,
       fontWeight: FontWeight.w600,
-      height: 2.15.h,
-      letterSpacing: 0.30,
+      height: isLandscape ? 1.075.h : 2.15.h,
+      letterSpacing: isLandscape ? 0.15 : 0.30,
     );
   }
 
   static ShapeDecoration getContainerShapeDecoration() {
     return ShapeDecoration(
-      color: Color(0xFF2F3142),
+      color: const Color(0xFF2F3142),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(36)),
     );
   }
@@ -62,45 +66,46 @@ class UiHelper {
     );
   }
 
-  static TextStyle getTrendingTextStyle() {
+  static TextStyle getTrendingTextStyle(BuildContext context) {
+    bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     return GoogleFonts.inter(
-      color: Color(0xFFF4F7FC),
-      fontSize: 24.h,
+      color: const Color(0xFFF4F7FC),
+      fontSize: isLandscape ? 12.sp : 24.sp,
       fontWeight: FontWeight.w700,
-      height: 1.17.h,
+      height: isLandscape ? 0.585.h : 1.17.h,
     );
   }
 
-  static TextStyle getPreviewTitleTextStyle() {
+  static TextStyle getPreviewTitleTextStyle(BuildContext context) {
+    bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     return GoogleFonts.inter(
-      color: Color(0xFFF4F7FC),
-      fontSize: 13.h,
-
+      color: const Color(0xFFF4F7FC),
+      fontSize: isLandscape ? 6.5.sp : 13.sp,
       fontWeight: FontWeight.w700,
-      height: 1.23.h,
-      letterSpacing: 0.30,
+      height: isLandscape ? 0.615.h : 1.23.h,
+      letterSpacing: isLandscape ? 0.15 : 0.30,
     );
   }
 
-  static TextStyle getPreviewAuthorTextStyle() {
+  static TextStyle getPreviewAuthorTextStyle(BuildContext context) {
+    bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     return GoogleFonts.inter(
-      color: Color(0xFFCCCCCC),
-      fontSize: 10,
-
+      color: const Color(0xFFCCCCCC),
+      fontSize: isLandscape ? 5.sp : 10.sp,
       fontWeight: FontWeight.w500,
-      height: 1.60,
-      letterSpacing: 0.30,
+      height: isLandscape ? 0.80.h : 1.60.h,
+      letterSpacing: isLandscape ? 0.15 : 0.30,
     );
   }
 
-  static TextStyle getTimeStyle() {
+  static TextStyle getTimeStyle(BuildContext context) {
+    bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     return GoogleFonts.inter(
-      color: Color(0xFFF4F7FC),
-      fontSize: 14,
-
+      color: const Color(0xFFF4F7FC),
+      fontSize: isLandscape ? 7.sp : 14.sp,
       fontWeight: FontWeight.w500,
-      height: 1.14,
-      letterSpacing: 0.30,
+      height: isLandscape ? 0.57.h : 1.14.h,
+      letterSpacing: isLandscape ? 0.15 : 0.30,
     );
   }
 }
