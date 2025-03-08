@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:podkes/now_playing.dart';
 import 'package:podkes/ui_helper.dart';
 
@@ -112,10 +113,10 @@ class Explore extends StatelessWidget {
 
                   child: Text(
                     'Trending',
-                    style: TextStyle(
+                    style: GoogleFonts.inter(
                       color: Color(0xFFF4F7FC),
                       fontSize: 24.h,
-                      fontFamily: 'Inter',
+                      
                       fontWeight: FontWeight.w700,
                       height: 1.17.h,
                     ),

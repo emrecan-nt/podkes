@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:podkes/ui_helper.dart';
+
 
 class NowPlaying extends StatelessWidget {
   const NowPlaying({super.key});
@@ -14,10 +16,10 @@ class NowPlaying extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'Now Playing',
-          style: TextStyle(
+          style: GoogleFonts.inter(
             color: Colors.white,
             fontSize: 16.h,
-            fontFamily: 'Inter',
+            
             fontWeight: FontWeight.w500,
             height: 1,
             letterSpacing: 0.30,
@@ -62,10 +64,10 @@ class NowPlaying extends StatelessWidget {
                 height: 45.h,
                 child: Text(
                   'The missing 96 percent of the universe',
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: Colors.white,
                     fontSize: 20.h,
-                    fontFamily: 'Inter',
+                    
                     fontWeight: FontWeight.w700,
                     height: 1.20.h,
                     letterSpacing: 0.30.h,
@@ -77,10 +79,10 @@ class NowPlaying extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(41.h, 20.h, 0, 20.h),
               child: Text(
                 'Claire Malone',
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   color: Color(0xFFCCCCCC),
                   fontSize: 14.h,
-                  fontFamily: 'Inter',
+                 
                   fontWeight: FontWeight.w500,
                   height: 1.14,
                   letterSpacing: 0.30,
@@ -89,7 +91,7 @@ class NowPlaying extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: 42),
-              child: Container(
+              child: SizedBox(
                 width: 290.w,
                 child: Image.asset("assets/images/fooo.png"),
               ),
@@ -97,38 +99,24 @@ class NowPlaying extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 39.h,
-              ), // Sağdan ve soldan 39px boşluk
+              ), 
               child: Column(
                 children: [
-                  SizedBox(height: 25.h), // Row ile arasına 25px boşluk ekler
+                  SizedBox(height: 25.h), 
                   Row(
                     children: [
                       Expanded(
                         child: Text(
                           '24:32',
                           textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Color(0xFFF4F7FC),
-                            fontSize: 14,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w500,
-                            height: 1.14,
-                            letterSpacing: 0.30,
-                          ),
+                          style: UiHelper.getTimeStyle(),
                         ),
                       ),
                       Expanded(
                         child: Text(
                           '34:00',
                           textAlign: TextAlign.right,
-                          style: TextStyle(
-                            color: Color(0xFFF4F7FC),
-                            fontSize: 14,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w500,
-                            height: 1.14,
-                            letterSpacing: 0.30,
-                          ),
+                          style: UiHelper.getTimeStyle(),
                         ),
                       ),
                     ],
@@ -138,7 +126,7 @@ class NowPlaying extends StatelessWidget {
             ),
             SizedBox(height: 40.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center, // Öğeleri ortalar
+              mainAxisAlignment: MainAxisAlignment.center, 
               children: [
                 Container(
                   width: 14.w,
@@ -150,7 +138,7 @@ class NowPlaying extends StatelessWidget {
                   ),
                   child: Image.asset("assets/images/back.png"),
                 ),
-                SizedBox(width: 28.w), // İkonlar arasına boşluk ekler
+                SizedBox(width: 28.w), 
                 Container(
                   width: 56.w,
                   height: 56.h,
@@ -160,7 +148,7 @@ class NowPlaying extends StatelessWidget {
                   ),
                   child: Image.asset("assets/images/Play.png"),
                 ),
-                SizedBox(width: 28.w), // İkonlar arasına boşluk ekler
+                SizedBox(width: 28.w),
                 Container(
                   width: 14.w,
                   height: 14.h,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class UiHelper {
   UiHelper._();
@@ -38,10 +39,9 @@ class UiHelper {
   }
 
   static TextStyle getSliderTextStyle() {
-    return TextStyle(
+    return GoogleFonts.inter(
       color: Color(0xFFF9F9FA),
       fontSize: 13,
-      fontFamily: 'Inter',
       fontWeight: FontWeight.w600,
       height: 2.15.h,
       letterSpacing: 0.30,
@@ -63,20 +63,19 @@ class UiHelper {
   }
 
   static TextStyle getTrendingTextStyle() {
-    return TextStyle(
+    return GoogleFonts.inter(
       color: Color(0xFFF4F7FC),
       fontSize: 24.h,
-      fontFamily: 'Inter',
       fontWeight: FontWeight.w700,
       height: 1.17.h,
     );
   }
 
   static TextStyle getPreviewTitleTextStyle() {
-    return TextStyle(
-      color: Colors.white,
+    return GoogleFonts.inter(
+      color: Color(0xFFF4F7FC),
       fontSize: 13.h,
-      fontFamily: 'Inter',
+
       fontWeight: FontWeight.w700,
       height: 1.23.h,
       letterSpacing: 0.30,
@@ -84,12 +83,23 @@ class UiHelper {
   }
 
   static TextStyle getPreviewAuthorTextStyle() {
-    return TextStyle(
+    return GoogleFonts.inter(
       color: Color(0xFFCCCCCC),
       fontSize: 10,
-      fontFamily: 'Inter',
+
       fontWeight: FontWeight.w500,
       height: 1.60,
+      letterSpacing: 0.30,
+    );
+  }
+
+  static TextStyle getTimeStyle() {
+    return GoogleFonts.inter(
+      color: Color(0xFFF4F7FC),
+      fontSize: 14,
+
+      fontWeight: FontWeight.w500,
+      height: 1.14,
       letterSpacing: 0.30,
     );
   }
