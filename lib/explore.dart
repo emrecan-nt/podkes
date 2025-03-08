@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:podkes/now_playing.dart';
 import 'package:podkes/ui_helper.dart';
 
 class Explore extends StatelessWidget {
@@ -108,7 +109,7 @@ class Explore extends StatelessWidget {
                 child: SizedBox(
                   width: 107.w,
                   height: 30.h,
-        
+
                   child: Text(
                     'Trending',
                     style: TextStyle(
@@ -126,22 +127,34 @@ class Explore extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: Row(
                 children: [
-                  Container(
-                    width: 160.w,
-                    height: 160.h,
-                    decoration:  UiHelper.getPreviewContainerDecoration(Color(0xFFB548C6)),
-                    padding: EdgeInsets.only(top: 39),
-                    child: Image.asset(
-                      "assets/images/preview1.png",
-                      fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => NowPlaying()),
+                      );
+                    },
+                    child: Container(
+                      width: 160.w,
+                      height: 160.h,
+                      decoration: UiHelper.getPreviewContainerDecoration(
+                        Color(0xFFB548C6),
+                      ),
+                      padding: EdgeInsets.only(top: 39),
+                      child: Image.asset(
+                        "assets/images/preview1.png",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-         
+
                   SizedBox(width: 12.w),
                   Container(
                     width: 160.w,
                     height: 160.h,
-                    decoration: UiHelper.getPreviewContainerDecoration(Color(0xFF32A7E2)),
+                    decoration: UiHelper.getPreviewContainerDecoration(
+                      Color(0xFF32A7E2),
+                    ),
                     child: Stack(
                       children: [
                         Positioned.fill(
@@ -151,7 +164,7 @@ class Explore extends StatelessWidget {
                           bottom: 0,
                           child: Image.asset(
                             "assets/images/preview2.png",
-        
+
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -174,7 +187,7 @@ class Explore extends StatelessWidget {
                     ),
                   ),
                 ),
-        
+
                 Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: SizedBox(
@@ -182,7 +195,7 @@ class Explore extends StatelessWidget {
                     height: 34.h,
                     child: Text(
                       'How Dolly Parton led me to an epiphany',
-                     style: UiHelper.getPreviewTitleTextStyle(),
+                      style: UiHelper.getPreviewTitleTextStyle(),
                     ),
                   ),
                 ),
@@ -210,7 +223,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Abumenyang',
-                        style: UiHelper.getPreviewAuthorTextStyle(), 
+                        style: UiHelper.getPreviewAuthorTextStyle(),
                       ),
                     ),
                   ),
@@ -222,11 +235,12 @@ class Explore extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    
                     width: 160.w,
                     height: 160.h,
-                    decoration:UiHelper.getPreviewContainerDecoration(Color(0xFFEC663B)),
-                    padding: EdgeInsets.only(top: 39),
+                    decoration: UiHelper.getPreviewContainerDecoration(
+                      Color(0xFFEC663B),
+                    ),
+                    padding: EdgeInsets.only(top: 35),
                     child: Image.asset(
                       "assets/images/preview3.png",
                       fit: BoxFit.cover,
@@ -234,11 +248,12 @@ class Explore extends StatelessWidget {
                   ),
                   SizedBox(width: 12.w),
                   Container(
-                    
                     width: 160.w,
                     height: 160.h,
-                     decoration:UiHelper.getPreviewContainerDecoration(Color(0xFFFFBF47),),
-                    padding: EdgeInsets.only(top: 39),
+                    decoration: UiHelper.getPreviewContainerDecoration(
+                      Color(0xFFFFBF47),
+                    ),
+                    padding: EdgeInsets.only(top: 30),
                     child: Image.asset(
                       "assets/images/preview4.png",
                       fit: BoxFit.cover,
@@ -260,7 +275,7 @@ class Explore extends StatelessWidget {
                     ),
                   ),
                 ),
-        
+
                 Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: SizedBox(
@@ -268,7 +283,7 @@ class Explore extends StatelessWidget {
                     height: 34.h,
                     child: Text(
                       'Ngobam with Denny Caknan',
-                      style:  UiHelper.getPreviewTitleTextStyle(),
+                      style: UiHelper.getPreviewTitleTextStyle(),
                     ),
                   ),
                 ),
@@ -285,7 +300,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Tir McDohl',
-                        style: UiHelper.getPreviewAuthorTextStyle(), 
+                        style: UiHelper.getPreviewAuthorTextStyle(),
                       ),
                     ),
                   ),
@@ -296,7 +311,7 @@ class Explore extends StatelessWidget {
                       height: 17,
                       child: Text(
                         'Denny Kulon',
-                        style: UiHelper.getPreviewAuthorTextStyle(), 
+                        style: UiHelper.getPreviewAuthorTextStyle(),
                       ),
                     ),
                   ),
@@ -307,7 +322,6 @@ class Explore extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        
         child: BottomNavigationBar(
           backgroundColor: Color(0xFF252836),
           selectedItemColor: Colors.white,
@@ -327,7 +341,6 @@ class Explore extends StatelessWidget {
             ),
           ],
         ),
-        
       ),
     );
   }
