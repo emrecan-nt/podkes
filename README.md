@@ -1,16 +1,34 @@
-# podkes
+# 🎵 Podkes - Music Player  
 
-A new Flutter project.
+Podkes, Flutter ile geliştirilen bir müzik çalar uygulamasıdır.  
 
-## Getting Started
+## 📱 Özellikler  
 
-This project is a starting point for a Flutter application.
+- **Responsive UI:** Uygulama, farklı ekran boyutlarına uyum sağlamak için **flutter_screenutil** kullanılarak ölçeklendirilmiştir.  
+- **Orientation Desteği:** **Portrait & Landscape** modlarına göre dinamik boyut ayarlamaları yapılmıştır.  
+- **Basit ve Şık Tasarım:** Kullanıcı dostu bir arayüz ile tasarlandı.  
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 Demo  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Uygulamanın ekran görüntüleri:  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img src="https://github.com/emrecan-nt/podkes/blob/main/assets/demo/demo1.jpg" width="250">
+  <img src="https://github.com/emrecan-nt/podkes/blob/main/assets/demo/demo2.jpg" width="250">
+  <img src="https://github.com/emrecan-nt/podkes/blob/main/assets/demo/demo3.jpg" width="250">
+</p>  
+
+## 🚀 Kullanılan Teknolojiler  
+
+- **Flutter**  
+- **Dart**  
+- **flutter_screenutil** (Responsive tasarım için)  
+- **Google Fonts** (Özel yazı tipleri için)
+
+Bu proje, mobil cihazlarda en iyi deneyimi sunmak için tasarlanmıştır. 🎶  
+
+## 📥 APK İndir  
+
+Uygulamanın **APK** dosyasını aşağıdaki bağlantıdan indirebilirsiniz:  
+
+[Podkes APK İndir](https://github.com/emrecan-nt/podkes/blob/main/assets/apk/app-release.apk)  
